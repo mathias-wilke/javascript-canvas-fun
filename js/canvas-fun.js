@@ -29,7 +29,6 @@ function resizeCanvas(){
     canvas.width = window.innerWidth - 20;
     //let us keep this sixteen by nine
     canvas.height = ((window.innerWidth) / 16) * 9;
-    console.log("resized BAM");
 }
 
 //let us call the function once at the start to get the user's canvas size
