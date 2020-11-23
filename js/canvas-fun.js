@@ -20,6 +20,7 @@ function update(){
 
 //clear the canvas
 function clear(){
+	ctx.setTransform(1, 0, 0, 1, 0, 0)
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
@@ -37,8 +38,10 @@ resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
 
 //this block will call the function clear, update, and draw all the time
-window.setInterval(function(){
+function loop() {
     clear();
     update();
     draw();
-  }, 1);
+    window.requestAnimationFrame(loop)
+}
+window.requestAnimationFrame(loop)
