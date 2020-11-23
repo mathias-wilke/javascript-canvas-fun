@@ -20,7 +20,7 @@ function update(){
 
 //clear the canvas
 function clear(){
-	ctx.setTransform(1, 0, 0, 1, 0, 0)
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
@@ -42,6 +42,6 @@ function loop() {
     clear();
     update();
     draw();
-    window.requestAnimationFrame(loop)
+    window.requestAnimationFrame(loop);
 }
-window.requestAnimationFrame(loop)
+window.requestAnimationFrame(loop);
