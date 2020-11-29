@@ -12,9 +12,9 @@ var backgroundColor = "#000000";
 function draw(){
     ctx.fillStyle = "white";
     ctx.font = "20px Arial";
-    ctx.fillText("My Project Name", 0, 15); 
+    ctx.fillText("My Project Name", 5, canvas.height - 60); 
     ctx.font = "10px Arial";
-    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-fun.git", 0, canvas.height - 4); 
+    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-fun.git", 5, canvas.height - 10); 
     //@TODO: implement your drawing here
 }
 
@@ -32,9 +32,8 @@ function clear(){
 
 //if the user changes the size of the window we have do recalculate
 function resizeCanvas(){
-    canvas.width = window.innerWidth - 20;
-    //let us keep this sixteen by nine
-    canvas.height = window.innerHeight - 20;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 //let us call the function once at the start to get the user's canvas size
